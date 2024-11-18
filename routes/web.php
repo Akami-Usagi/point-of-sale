@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/users", [UsersController::class, "index"])->name('users.index');
+
 Route::get("/users/create", [UsersController::class, "create"])->name('users.create');
 Route::post("/", [UsersController::class, "store"])->name('users.store');

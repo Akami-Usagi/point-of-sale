@@ -13,9 +13,11 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view("users.index", [
-            "users" => User::all()
-        ]);
+        // Obtén todos los usuarios
+        $users = User::all();
+
+        // Devuelve los datos en formato JSON
+        return response()->json($users);
     }
 
     /**
@@ -40,7 +42,7 @@ class UsersController extends Controller
 
         ]);
 
-        return redirect()->route("users.index");
+        
 
     }
 

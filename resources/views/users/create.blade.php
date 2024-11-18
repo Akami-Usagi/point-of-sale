@@ -5,7 +5,7 @@
 
 @section("content")
 
-    <a href="{{route('users.index')}}">Cancel</a>
+    
     
    <form action="{{route('users.store')}}" method="POST">
         @csrf
